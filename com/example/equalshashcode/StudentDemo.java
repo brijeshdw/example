@@ -15,7 +15,7 @@ public static void main(String[] args){
 	StudentDemo s2=new StudentDemo("bhaskar",102);
 	StudentDemo s3=new StudentDemo("vijayabhaskar",101);
 	StudentDemo s4=s1;
-System.out.println(s1.equals(s2));
+System.out.println(s1==s3);
 System.out.println(s1.equals(s3));
 System.out.println(s1.equals(s4));
 }}

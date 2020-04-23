@@ -3,6 +3,22 @@ package com.example.equalshashcode;
 public class Student {
     private int id;
     private String name;
+
+@Override
+public int hashCode() {
+    return id;
+}
+
+@Override
+public boolean equals(Object obj) {
+    if (obj == null) return false;
+    if (!(obj instanceof Student))
+        return false;
+    if (obj == this)
+        return true;
+    return this.getId() == ((Student) obj).getId();
+}
+
     public Student(int id, String name) {
         this.name = name;
         this.id = id;
