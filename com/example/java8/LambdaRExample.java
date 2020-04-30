@@ -1,21 +1,21 @@
 package com.example.java8;
 
-import java.util.stream.LongStream;
-
+import java.util.stream.IntStream;
+@FunctionalInterface
 interface Arithmetic {
-	public abstract long factorialStreams(long n);
+	public  int factorialStreams(int n);
 }
 
 public class LambdaRExample implements Arithmetic  {
 	@Override
-	 public  long factorialStreams(long n) {
-	        return LongStream.rangeClosed(2, n)
-	                .reduce(1, (long a, long b) -> a + b);
+	 public  int factorialStreams(int n) {
+	        return IntStream.rangeClosed(2, n)
+	                .reduce(1, (int a, int b) -> a + b);
 	    }
 	public static void main(String[] args) {
 	 {
 		 LambdaRExample r = new LambdaRExample();
-		long x = r.factorialStreams(100);
+		int x = r.factorialStreams(100);
 		System.out.println(x);
 		 
 	 }
